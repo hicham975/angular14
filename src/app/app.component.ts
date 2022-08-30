@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BookService } from './services/book/book.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'books-manager';
+
+  books :Array<any>;
+
+  constructor(private bookservice: BookService){
+
+    this.books=this.bookservice.books;
+  }
+/**
+ *
+ * @param newStatus
+ */
+
+  onclickSwitchNewStatus(newStatus: string){
+
+    this.bookservice.switchAllBooksStatus(newStatus);
+  }
+
+
 }
