@@ -2,4 +2,15 @@
   <td>{{ title }}</td>
   <td>{{ author}}</td>
   <td>{{ status}}</td>
+  <td>
+    <button
+    type="button"
+    class="btn btn-dark"
+    (click)="onclickSwitchStatus(nextStatus)"
+    >
+Change en {{ nextStatus }}
+
+  </button>
+
+</td>
 

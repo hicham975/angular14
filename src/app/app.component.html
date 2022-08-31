@@ -16,11 +16,13 @@
         <th scope="col">Titre</th>
         <th scope="col">Auteur</th>
         <th scope="col">Status</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
 
       <tr app-table-row *ngFor="let item of books"
+      [id]="item.id"
       [title]="item.title"
       [author]="item.author"
       [status]="item.status">
